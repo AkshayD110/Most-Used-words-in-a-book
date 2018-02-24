@@ -20,8 +20,14 @@ def wordsFromPDFfile(path):
         totalWord += int(len(wordsInPage))
     #print("words:", totalWord)
     commanWords=(collections.Counter(listOfWords).most_common(10))
+    timeToReadBookInminutes=divmod(totalWord,200)
+    finalTime=divmod(timeToReadBookInminutes[0],60)
+
     print(f"The book has - \n {numOfPages} : no. of pages, \n {totalWord} : no. of words, \n The most common words in "
           f"the book are : \n {commanWords}")
+    print(f"As per the average read speed of a person(200words/min), it would take {finalTime[0]}hours, {finalTime[1]} minutes")
+
+
 
 def wordsFromTextFile(path):
     words = re.findall(r'\w+', open(path).read().lower())
