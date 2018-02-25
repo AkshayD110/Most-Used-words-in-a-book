@@ -25,7 +25,7 @@ def wordsFromPDFfile(path):
 
     print(f"The book has - \n {numOfPages} : no. of pages, \n {totalWord} : no. of words, \n The most common words in "
           f"the book are : \n {commanWords}")
-    print(f"As per the average read speed of a person(200words/min), it would take {finalTime[0]}hours, {finalTime[1]} minutes")
+    print(f"As per the average read speed of a person(200words/min), it would take {finalTime[0]}hours, {finalTime[1]} minutes to complete this book")
 
 
 
