@@ -31,8 +31,9 @@ def wordsFromPDFfile(path):
 
 def wordsFromTextFile(path):
     words = re.findall(r'\w+', open(path).read().lower())
-    print("words",len(words))
+    print("The book has these many words ",len(words))
     print(collections.Counter(words).most_common(10))
+
 
 
 wordsFromPDFfile(r"C:\Users\akshdesh.ORADEV\Documents\books\python\fluent-python-2015-.pdf")
